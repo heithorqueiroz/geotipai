@@ -1,46 +1,58 @@
+[media pointer="file-service://file-6Ke8bCHzppsEzeB3PpVDSy"]
+[media pointer="file-service://file-SujYzygT1vby5hfUwGvUg2"]
 ```html
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoTipAI - Monitoramento Agrícola Inteligente</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GeoTipAI - Monitoramento Agrícola Inteligente</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
         :root {
-            --primary-brown: #6B3F1D;
-            --secondary-brown: #D6B48D;
-            --light-brown: #E6C8A5;
-            --white: #FFFFFF;
-            --black: #000000;
-            --accent-green: #4CAF50;
-            --accent-yellow: #FFD700;
-            --accent-orange: #FF8C00;
+            --primary-green: #4caf50;
+            --secondary-green: #8bc34a;
+            --light-green: #66bb6a;
+            --earth-brown: #8d6e63;
+            --sky-blue: #4fc3f7;
+            --dark-bg: #121826;
+            --darker-bg: #0a101f;
+            --card-bg: #1e293b;
+            --text-light: #e2e8f0;
+            --text-muted: #94a3b8;
+            --white: #ffffff;
+            --accent-yellow: #fbbf24;
+            --accent-red: #ef4444;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Roboto', sans-serif;
-            color: var(--primary-brown);
-            background-color: var(--primary-brown);
+            color: var(--text-light);
+            background-color: var(--dark-bg);
             line-height: 1.6;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(214, 180, 141, 0.15) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(230, 200, 165, 0.1) 0%, transparent 20%);
+                radial-gradient(circle at 10% 20%, rgba(76, 175, 80, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(79, 195, 247, 0.1) 0%, transparent 20%);
         }
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         /* Header & Navigation */
         header {
-            background-color: rgba(107, 63, 29, 0.9);
+            background-color: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
@@ -48,43 +60,51 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(214, 180, 141, 0.3);
+            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
         }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
         }
+
         .logo {
             display: flex;
             align-items: center;
             font-weight: 700;
             font-size: 1.5rem;
-            color: var(--secondary-brown);
+            color: var(--primary-green);
         }
+
         .logo i {
             margin-right: 8px;
-            color: var(--accent-green);
+            color: var(--sky-blue);
         }
+
         .nav-links {
             display: flex;
             list-style: none;
         }
+
         .nav-links li {
             margin-left: 2rem;
         }
+
         .nav-links a {
             text-decoration: none;
-            color: var(--white);
+            color: var(--text-light);
             font-weight: 500;
             transition: color 0.3s, transform 0.2s;
             position: relative;
         }
+
         .nav-links a:hover {
-            color: var(--secondary-brown);
+            color: var(--primary-green);
             transform: translateY(-2px);
         }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -92,32 +112,37 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--secondary-brown);
+            background-color: var(--primary-green);
             transition: width 0.3s;
         }
+
         .nav-links a:hover::after {
             width: 100%;
         }
+
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--secondary-brown);
+            color: var(--primary-green);
             cursor: pointer;
             transition: transform 0.3s;
         }
+
         .mobile-menu-btn:hover {
             transform: scale(1.2);
         }
+
         /* Hero Section */
         .hero {
             padding: 140px 0 100px;
-            background: linear-gradient(135deg, rgba(107, 63, 29, 0.95) 0%, rgba(85, 50, 23, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 16, 31, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -125,12 +150,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://placehold.co/1920x1080/6B3F1D/FFFFFF?text=Satellite+View');
+            background-image: url('https://placehold.co/1920x1080/1e293b/4caf50?text=Satellite+View');
             background-size: cover;
             background-position: center;
             opacity: 0.1;
             z-index: 0;
         }
+
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
@@ -138,41 +164,46 @@
             z-index: 1;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
+
         .hero h1 {
             font-size: 2.8rem;
             margin-bottom: 1.5rem;
             color: var(--white);
             font-weight: 700;
         }
+
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2.5rem;
-            color: var(--secondary-brown);
+            color: var(--text-muted);
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
+
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, var(--secondary-brown), var(--light-brown));
-            color: var(--black);
+            background: linear-gradient(45deg, var(--primary-green), var(--light-green));
+            color: var(--white);
             padding: 14px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.15rem;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 8px 25px rgba(214, 180, 141, 0.3);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
             border: none;
             cursor: pointer;
             position: relative;
             overflow: hidden;
         }
+
         .cta-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(214, 180, 141, 0.4);
-            background: linear-gradient(45deg, var(--light-brown), var(--secondary-brown));
+            box-shadow: 0 12px 30px rgba(76, 175, 80, 0.4);
+            background: linear-gradient(45deg, var(--light-green), var(--primary-green));
         }
+
         .cta-button::after {
             content: '';
             position: absolute;
@@ -185,16 +216,19 @@
             transition: transform 0.5s;
             opacity: 0;
         }
+
         .cta-button:hover::after {
             transform: rotate(45deg) translate(50%, 50%);
             opacity: 1;
         }
+
         /* Features Section */
         .features {
             padding: 100px 0;
-            background-color: #5A3318;
+            background-color: var(--darker-bg);
             position: relative;
         }
+
         .features::before {
             content: '';
             position: absolute;
@@ -202,8 +236,9 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(214, 180, 141, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.3), transparent);
         }
+
         .section-title {
             text-align: center;
             font-size: 2.2rem;
@@ -214,6 +249,7 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -222,25 +258,28 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, var(--secondary-brown), var(--accent-green));
+            background: linear-gradient(90deg, var(--primary-green), var(--sky-blue));
             border-radius: 2px;
         }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
         }
+
         .feature-card {
-            background-color: #8B5E3C;
+            background-color: var(--card-bg);
             border-radius: 16px;
             padding: 2.5rem 2rem;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(214, 180, 141, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.1);
             position: relative;
             overflow: hidden;
         }
+
         .feature-card::before {
             content: '';
             position: absolute;
@@ -248,43 +287,50 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--secondary-brown), var(--accent-green));
+            background: linear-gradient(90deg, var(--primary-green), var(--sky-blue));
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s;
         }
+
         .feature-card:hover {
             transform: translateY(-15px) scale(1.03);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            border-color: rgba(214, 180, 141, 0.4);
+            border-color: rgba(76, 175, 80, 0.3);
         }
+
         .feature-card:hover::before {
             transform: scaleX(1);
         }
+
         .feature-icon {
             font-size: 3.5rem;
             margin-bottom: 1.8rem;
             display: inline-block;
-            background: linear-gradient(135deg, var(--secondary-brown), var(--accent-green));
+            background: linear-gradient(135deg, var(--primary-green), var(--sky-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .feature-card h3 {
             font-size: 1.6rem;
             margin-bottom: 1.2rem;
             color: var(--white);
             font-weight: 600;
         }
+
         .feature-card p {
-            color: var(--secondary-brown);
+            color: var(--text-muted);
             line-height: 1.7;
         }
+
         /* How It Works Section */
         .how-it-works {
             padding: 100px 0;
-            background-color: #5A3318;
+            background-color: var(--dark-bg);
         }
+
         .steps {
             display: flex;
             flex-wrap: wrap;
@@ -292,20 +338,22 @@
             gap: 2.5rem;
             margin-top: 2rem;
         }
+
         .step {
             flex: 1;
             min-width: 280px;
             max-width: 350px;
-            background-color: #8B5E3C;
+            background-color: var(--card-bg);
             border-radius: 16px;
             padding: 2.5rem 2rem;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(214, 180, 141, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.1);
             position: relative;
             overflow: hidden;
         }
+
         .step::before {
             content: '';
             position: absolute;
@@ -313,49 +361,56 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--secondary-brown), var(--accent-green));
+            background: linear-gradient(90deg, var(--primary-green), var(--light-green));
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s;
         }
+
         .step:hover {
             transform: translateY(-15px) scale(1.03);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            border-color: rgba(214, 180, 141, 0.4);
+            border-color: rgba(76, 175, 80, 0.3);
         }
+
         .step:hover::before {
             transform: scaleX(1);
         }
+
         .step-number {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--secondary-brown), var(--light-brown));
-            color: var(--black);
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
             border-radius: 50%;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1.8rem;
-            box-shadow: 0 5px 15px rgba(214, 180, 141, 0.4);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
         }
+
         .step h3 {
             font-size: 1.6rem;
             margin-bottom: 1.3rem;
             color: var(--white);
             font-weight: 600;
         }
+
         .step p {
-            color: var(--secondary-brown);
+            color: var(--text-muted);
             line-height: 1.7;
         }
+
         /* Demo Section */
         .demo {
             padding: 100px 0;
-            background-color: #5A3318;
+            background-color: var(--darker-bg);
             position: relative;
         }
+
         .demo::before {
             content: '';
             position: absolute;
@@ -363,19 +418,21 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(214, 180, 141, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(79, 195, 247, 0.3), transparent);
         }
+
         .demo-placeholder {
             max-width: 900px;
             margin: 0 auto;
-            background: linear-gradient(135deg, #8B5E3C, #7A4F2D);
+            background: linear-gradient(135deg, var(--card-bg), #2d3748);
             border-radius: 16px;
             padding: 2.5rem;
             position: relative;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(214, 180, 141, 0.3);
+            border: 1px solid rgba(79, 195, 247, 0.2);
         }
+
         .demo-placeholder::before {
             content: "";
             position: absolute;
@@ -383,34 +440,38 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, var(--secondary-brown), var(--accent-green), var(--light-brown));
+            background: linear-gradient(90deg, var(--primary-green), var(--sky-blue), var(--light-green));
         }
+
         .demo-content {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         .demo-image {
             width: 100%;
             height: 320px;
-            background: linear-gradient(45deg, #8B5E3C, #7A4F2D);
+            background: linear-gradient(45deg, #1e293b, #334155);
             margin-bottom: 1.8rem;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
-            border: 1px solid rgba(214, 180, 141, 0.4);
+            border: 1px solid rgba(79, 195, 247, 0.3);
         }
+
         .demo-image::after {
             content: 'Visualização NDVI - Dados Simulados';
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: var(--secondary-brown);
+            color: var(--text-muted);
             font-size: 1.1rem;
             font-weight: 500;
             text-align: center;
         }
+
         .demo-image::before {
             content: '';
             position: absolute;
@@ -422,13 +483,15 @@
             border-radius: 50%;
             box-shadow: 0 0 10px var(--accent-yellow);
         }
+
         /* Contact & Footer */
         footer {
-            background: linear-gradient(135deg, #5A3318, #4A2813);
+            background: linear-gradient(135deg, var(--darker-bg), #0f172a);
             padding: 70px 0 40px;
             position: relative;
             overflow: hidden;
         }
+
         footer::before {
             content: '';
             position: absolute;
@@ -436,8 +499,9 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(214, 180, 141, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.3), transparent);
         }
+
         .footer-content {
             display: flex;
             flex-wrap: wrap;
@@ -445,10 +509,12 @@
             gap: 3rem;
             margin-bottom: 3rem;
         }
+
         .footer-column {
             flex: 1;
             min-width: 250px;
         }
+
         .footer-column h3 {
             font-size: 1.4rem;
             margin-bottom: 1.8rem;
@@ -457,6 +523,7 @@
             position: relative;
             display: inline-block;
         }
+
         .footer-column h3::after {
             content: '';
             position: absolute;
@@ -464,56 +531,64 @@
             left: 0;
             width: 40px;
             height: 3px;
-            background-color: var(--secondary-brown);
+            background-color: var(--primary-green);
             border-radius: 2px;
         }
+
         .footer-column p, .footer-column a {
-            color: var(--secondary-brown);
+            color: var(--text-muted);
             margin-bottom: 0.9rem;
             display: block;
             text-decoration: none;
             transition: color 0.3s;
         }
+
         .footer-column a:hover {
-            color: var(--secondary-brown);
+            color: var(--primary-green);
         }
+
         .footer-column i {
             margin-right: 10px;
-            color: var(--secondary-brown);
+            color: var(--primary-green);
             width: 20px;
             text-align: right;
         }
+
         .social-links {
             display: flex;
             gap: 1.2rem;
             margin-top: 1.5rem;
         }
+
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 45px;
             height: 45px;
-            background: rgba(214, 180, 141, 0.1);
+            background: rgba(76, 175, 80, 0.1);
             border-radius: 50%;
-            color: var(--secondary-brown);
+            color: var(--primary-green);
             transition: all 0.3s;
-            border: 1px solid rgba(214, 180, 141, 0.3);
+            border: 1px solid rgba(76, 175, 80, 0.2);
         }
+
         .social-links a:hover {
-            background-color: var(--secondary-brown);
-            color: var(--black);
+            background-color: var(--primary-green);
+            color: var(--white);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(214, 180, 141, 0.3);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
         }
+
         .copyright {
             text-align: center;
             padding-top: 35px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--secondary-brown);
+            color: var(--text-muted);
             font-size: 0.95rem;
             position: relative;
         }
+
         .copyright::before {
             content: '';
             position: absolute;
@@ -522,16 +597,19 @@
             transform: translateX(-50%);
             width: 60px;
             height: 1px;
-            background: rgba(214, 180, 141, 0.3);
+            background: rgba(76, 175, 80, 0.3);
         }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.3rem;
             }
+
             .hero p {
                 font-size: 1.15rem;
             }
+
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -539,30 +617,36 @@
                 position: absolute;
                 top: 100%;
                 left: 0;
-                background-color: #8B5E3C;
+                background-color: var(--card-bg);
                 box-shadow: 0 10px 20px rgba(0,0,0,0.3);
                 padding: 1.2rem 0;
                 border-radius: 0 0 10px 10px;
-                border: 1px solid rgba(214, 180, 141, 0.3);
+                border: 1px solid rgba(76, 175, 80, 0.2);
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .nav-links li {
                 margin: 0.8rem 2rem;
                 opacity: 0;
                 animation: fadeIn 0.3s forwards;
             }
+
             @keyframes fadeIn {
                 from { opacity: 0; transform: translateY(-10px); }
                 to { opacity: 1; transform: translateY(0); }
             }
+
             .mobile-menu-btn {
                 display: block;
             }
+
             .step, .feature-card {
                 min-width: 100%;
             }
+
             .section-title {
                 font-size: 2rem;
                 left: 50%;
@@ -570,19 +654,24 @@
                 text-align: center;
             }
         }
+
         @media (max-width: 480px) {
             .hero {
                 padding: 120px 0 80px;
             }
+
             .hero h1 {
                 font-size: 2rem;
             }
+
             .section-title {
                 font-size: 1.8rem;
             }
+
             .demo-placeholder {
                 padding: 1.8rem;
             }
+
             .cta-button {
                 padding: 12px 30px;
                 font-size: 1.05rem;
@@ -591,143 +680,144 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <i class="fas fa-seedling"></i>
-                    <span>GeoTipAI</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#recursos">Recursos</a></li>
-                    <li><a href="#como-funciona">Como Funciona</a></li>
-                    <li><a href="#demo">Demo</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Monitoramento Agrícola Inteligente para Pequenos Produtores</h1>
-                <p>GeoTipAI utiliza imagens de satélite, drones e inteligência artificial para ajudar produtores de uva, banana e manga a monitorar suas plantações e tomar decisões mais precisas.</p>
-                <a href="#demo" class="cta-button">Comece Agora</a>
-            </div>
-        </div>
-    </section>
-    <!-- Features Section -->
-    <section class="features" id="recursos">
-        <div class="container">
-            <h2 class="section-title">Tecnologia de Ponta a Serviço do Campo</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-satellite-dish"></i>
-                    </div>
-                    <h3>Imagens de Satélite</h3>
-                    <p>Utilizamos dados gratuitos dos satélites Sentinel-1 e Sentinel-2 da ESA para monitorar suas plantações semanalmente, sem custo adicional. Análise de NDVI, umidade do solo e cobertura vegetal.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Inteligência Artificial</h3>
-                    <p>Nossos modelos de IA analisam as imagens para detectar estresse hídrico, doenças e prever estágios fenológicos com alta precisão. Alertas personalizados para cada cultura e condição local.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-drone"></i>
-                    </div>
-                    <h3>Imagens de Drones</h3>
-                    <p>Integramos dados de drones para obter imagens de alta resolução em áreas específicas que precisam de maior atenção. Mapeamento detalhado de problemas pontuais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="como-funciona">
-        <div class="container">
-            <h2 class="section-title">Como Funciona</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Carregue sua Área</h3>
-                    <p>Delimite sua propriedade no mapa ou importe o shapefile. O sistema identifica automaticamente os tipos de cultura plantadas e configura os parâmetros de monitoramento.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Monitore os Indicadores</h3>
-                    <p>Acompanhe NDVI, chuva (CHIRPS), temperatura e previsões fenológicas em tempo real através do painel inteligente. Histórico de dados para análise de tendências.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Receba Recomendações</h3>
-                    <p>O sistema gera alertas e recomendações personalizadas para irrigação, adubação e controle de pragas. Integração com serviços meteorológicos locais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Demo Section -->
-    <section class="demo" id="demo">
-        <div class="container">
-            <h2 class="section-title">Experimente a Demo</h2>
-            <div class="demo-placeholder">
-                <div class="demo-content">
-                    <div class="demo-image">
-                        <!-- Placeholder for actual satellite/NDVI visualization -->
-                    </div>
-                    <p>Explore nosso painel interativo com dados históricos de NDVI, precipitação e previsões fenológicas. Visualização intuitiva para tomada de decisões.</p>
-                    <a href="#" class="cta-button" id="start-demo">Iniciar Demo</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer id="contato">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>GeoTipAI</h3>
-                    <p>Plataforma de monitoramento agrícola que combina sensoriamento remoto e inteligência artificial para apoiar pequenos produtores de frutas no Brasil. Tecnologia acessível para um agronegócio mais sustentável.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Recursos</h3>
-                    <a href="#"><i class="fas fa-leaf"></i> Plataforma de Monitoramento</a>
-                    <a href="#"><i class="fas fa-satellite"></i> Dados de Satélite (Sentinel)</a>
-                    <a href="#"><i class="fas fa-microchip"></i> Modelos de IA para Agricultura</a>
-                    <a href="#"><i class="fas fa-plug"></i> API para Desenvolvedores</a>
-                </div>
-                <div class="footer-column">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-envelope"></i> contato@geotipai.com.br</p>
-                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
-                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP - Brasil</p>
-                    <p><i class="fas fa-university"></i> Parceria com Embrapa e UFSCar</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 GeoTipAI. Todos os direitos reservados. | Feito com <i class="fas fa-heart" style="color: #e53935;"></i> para o agronegócio brasileiro</p>
-            </div>
-        </div>
-    </footer>
-    <script>
+<!-- Header -->
+<header>
+<div class="container">
+<nav>
+<div class="logo">
+<i class="fas fa-seedling"></i>
+<span>GeoTipAI</span>
+</div>
+<ul class="nav-links">
+<li><a href="#inicio">Início</a></li>
+<li><a href="#recursos">Recursos</a></li>
+<li><a href="#como-funciona">Como Funciona</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+<button class="mobile-menu-btn">
+<i class="fas fa-bars"></i>
+</button>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero" id="inicio">
+<div class="container">
+<div class="hero-content">
+<h1>Monitoramento Agrícola Inteligente para Pequenos Produtores</h1>
+<p></p>
+<a class="cta-button" href="#demo">Comece Agora</a>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="features" id="recursos">
+<div class="container">
+<h2 class="section-title">Tecnologia de Ponta a Serviço do Campo</h2>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fas fa-satellite-dish"></i>
+</div>
+<h3>Imagens de Satélite</h3>
+<p>Utilizamos dados gratuitos dos satélites Sentinel-1 e Sentinel-2 da ESA para monitorar suas plantações semanalmente, sem custo adicional. Análise de NDVI, umidade do solo e cobertura vegetal.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fas fa-brain"></i>
+</div>
+<h3>Inteligência Artificial</h3>
+<p>Nossos modelos de IA analisam as imagens para detectar estresse hídrico, doenças e prever estágios fenológicos com alta precisão. Alertas personalizados para cada cultura e condição local.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<i class="fas fa-drone"></i>
+</div>
+<h3></h3>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="how-it-works" id="como-funciona">
+<div class="container">
+<h2 class="section-title">Como Funciona</h2>
+<div class="steps">
+<div class="step">
+<div class="step-number">1</div>
+<h3>Carregue sua Área</h3>
+<p>Delimite sua propriedade no mapa ou importe o shapefile. O sistema identifica automaticamente os tipos de cultura plantadas e configura os parâmetros de monitoramento.</p>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<h3>Monitore os Indicadores</h3>
+<p>Acompanhe NDVI, chuva (CHIRPS), temperatura e previsões fenológicas em tempo real através do painel inteligente. Histórico de dados para análise de tendências.</p>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<h3>Receba Recomendações</h3>
+<p>O sistema gera alertas e recomendações personalizadas para irrigação, adubação e controle de pragas. Integração com serviços meteorológicos locais.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Demo Section -->
+<section class="demo" id="demo">
+<div class="container">
+<h2 class="section-title">Experimente a Demo</h2>
+<div class="demo-placeholder">
+<div class="demo-content">
+<div class="demo-image">
+<!-- Placeholder for actual satellite/NDVI visualization -->
+</div>
+<p>Explore nosso painel interativo com dados históricos de NDVI, precipitação e previsões fenológicas. Visualização intuitiva para tomada de decisões.</p>
+<a class="cta-button" href="#" id="start-demo">Iniciar Demo</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="contato">
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>GeoTipAI</h3>
+<p></p>
+<div class="social-links">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="footer-column">
+<h3>Recursos</h3>
+<a href="#"><i class="fas fa-leaf"></i> Plataforma de Monitoramento</a>
+<a href="#"><i class="fas fa-satellite"></i> Dados de Satélite (Sentinel)</a>
+<a href="#"><i class="fas fa-microchip"></i> Modelos de IA para Agricultura</a>
+<a href="#"><i class="fas fa-plug"></i> API para Desenvolvedores</a>
+</div>
+<div class="footer-column">
+<h3>Contato</h3>
+<p><i class="fas fa-envelope"></i> contato@geotipai.com.br</p>
+<p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+<p><i class="fas fa-map-marker-alt"></i> São Paulo, SP - Brasil</p>
+<p><i class="fas fa-university"></i> Parceria com Embrapa e UFSCar</p>
+</div>
+</div>
+<div class="copyright">
+<p>© 2023 GeoTipAI. Todos os direitos reservados. | Feito com <i class="fas fa-heart" style="color: #e53935;"></i> para o agronegócio brasileiro</p>
+</div>
+</div>
+</footer>
+<script>
         // Mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
+            
             // Animate menu items
             if (navLinks.classList.contains('active')) {
                 const items = navLinks.querySelectorAll('li');
@@ -739,16 +829,19 @@
                 });
             }
         });
+
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('active');
             });
         });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
@@ -758,6 +851,7 @@
                 }
             });
         });
+
         // Demo button functionality
         document.getElementById('start-demo').addEventListener('click', function(e) {
             e.preventDefault();
@@ -776,23 +870,23 @@
                     animation: fadeIn 0.3s;
                 ">
                     <div style="
-                        background: #8B5E3C;
+                        background: var(--card-bg);
                         border-radius: 16px;
                         padding: 2.5rem;
                         max-width: 500px;
                         width: 90%;
                         text-align: center;
                         box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-                        border: 1px solid rgba(214, 180, 141, 0.3);
+                        border: 1px solid rgba(76, 175, 80, 0.3);
                     ">
                         <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 1.5rem;">Bem-vindo à Demo GeoTipAI!</h3>
-                        <p style="color: var(--secondary-brown); margin-bottom: 2rem; line-height: 1.6;">
+                        <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
                             Esta é uma versão simulada da plataforma. Em breve integraremos com o módulo MVP real para fornecer dados atualizados de satélite e análises de IA.
                         </p>
                         <div style="display: flex; gap: 1rem; justify-content: center;">
                             <button id="close-modal" style="
                                 background: transparent;
-                                color: var(--secondary-brown);
+                                color: var(--text-muted);
                                 border: 1px solid rgba(255,255,255,0.2);
                                 padding: 10px 20px;
                                 border-radius: 8px;
@@ -800,19 +894,20 @@
                                 transition: all 0.3s;
                             ">Fechar</button>
                             <button id="enter-demo" style="
-                                background: linear-gradient(45deg, var(--secondary-brown), var(--light-brown));
-                                color: var(--black);
+                                background: linear-gradient(45deg, var(--primary-green), var(--light-green));
+                                color: white;
                                 border: none;
                                 padding: 10px 25px;
                                 border-radius: 8px;
                                 cursor: pointer;
                                 font-weight: 500;
                                 transition: all 0.3s;
-                                box-shadow: 0 5px 15px rgba(214, 180, 141, 0.3);
+                                box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
                             ">Entrar na Demo</button>
                         </div>
                     </div>
                 </div>
+                
                 <style>
                     @keyframes fadeIn {
                         from { opacity: 0; }
@@ -824,24 +919,27 @@
                     }
                 </style>
             `;
+            
             // Remove existing modal if any
             const existingModal = document.getElementById('demo-modal');
             if (existingModal) {
                 existingModal.remove();
             }
+            
             // Add modal to page
             document.body.insertAdjacentHTML('beforeend', modalHTML);
+            
             // Add event listeners to modal buttons
             document.getElementById('close-modal').addEventListener('click', function() {
                 document.getElementById('demo-modal').remove();
             });
+            
             document.getElementById('enter-demo').addEventListener('click', function() {
-                alert('Iniciando experiência de demo...
-Você está visualizando dados simulados de uma plantação de uva no Vale do São Francisco.
-Em breve: integração com API real do MVP!');
+                alert('Iniciando experiência de demo...\n\nVocê está visualizando dados simulados de uma plantação de uva no Vale do São Francisco.\n\nEm breve: integração com API real do MVP!');
                 document.getElementById('demo-modal').remove();
             });
         });
+
         // Add particle effect to hero section
         document.addEventListener('DOMContentLoaded', function() {
             const hero = document.querySelector('.hero');
@@ -850,7 +948,7 @@ Em breve: integração com API real do MVP!');
                 particle.style.position = 'absolute';
                 particle.style.width = Math.random() * 4 + 1 + 'px';
                 particle.style.height = particle.style.width;
-                particle.style.backgroundColor = Math.random() > 0.5 ? '#D6B48D' : '#4CAF50';
+                particle.style.backgroundColor = Math.random() > 0.5 ? '#4caf50' : '#4fc3f7';
                 particle.style.borderRadius = '50%';
                 particle.style.opacity = Math.random() * 0.5 + 0.1;
                 particle.style.left = Math.random() * 100 + 'vw';
@@ -859,6 +957,7 @@ Em breve: integração com API real do MVP!');
                 particle.style.animation = `float ${Math.random() * 20 + 10}s linear infinite`;
                 hero.appendChild(particle);
             }
+            
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes float {
@@ -868,6 +967,57 @@ Em breve: integração com API real do MVP!');
             `;
             document.head.appendChild(style);
         });
+
+        // TODO: Integration hook - function to fetch NDVI data from MVP backend
+        /*
+        async function fetchNDVIData(fieldId, startDate, endDate) {
+            try {
+                const response = await fetch(`/api/ndvi?field=${fieldId}&start=${startDate}&end=${endDate}`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching NDVI data:', error);
+                return null;
+            }
+        }
+        */
+
+        // TODO: Integration hook - function to fetch rainfall data (CHIRPS)
+        /*
+        async function fetchRainfallData(lat, lng, startDate, endDate) {
+            try {
+                const response = await fetch(`/api/rainfall?lat=${lat}&lng=${lng}&start=${startDate}&end=${endDate}`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching rainfall data:', error);
+                return null;
+            }
+        }
+        */
+
+        // TODO: Integration hook - function to get phenology predictions
+        /*
+        async function getPhenologyPrediction(fieldId) {
+            try {
+                const response = await fetch(`/api/phenology?field=${fieldId}`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error getting phenology prediction:', error);
+                return null;
+            }
+        }
+        */
+
+        // TODO: Integration hook - initialize map with satellite layers
+        /*
+        function initializeMap() {
+            // Would integrate with mapping library (e.g., Leaflet or Mapbox)
+            // and add Sentinel satellite layers
+            console.log('Initializing map with satellite layers...');
+        }
+        */
     </script>
 </body>
 </html>
